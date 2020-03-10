@@ -1,4 +1,4 @@
-def turn_count(counter)
+def turn_count(board)
   turns = 0
   board.each do |space|
     if space == "X" || space = "O"
@@ -6,5 +6,11 @@ def turn_count(counter)
   end
 end
 
-def current_player
+def current_player(board)
+  turns = turn_count(board)
+  if turns % 2 = 0
+    current_player = "X"
+  else
+    current_player = "0"
+  end
 end
